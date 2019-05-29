@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shopping page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+    body{
+        margin: 0 auto;
+    }    
+    .summerSaleContainer{
+        background-color: black;
+        color: white;
+        margin-bottom: 2%;
+        font-size: 17px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }    
+    .logo{
+        width: 7%;
+        border-radius: 50%;
+        float: left;
+    } 
+    .clear{
+        clear: both;
+    }
+    header{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }  
+    .header{
+        display: inline-flex; 
+        list-style-type: none;
+        justify-content: space-evenly;
+        width: 85%;
+        margin-top: 2.5%;
+    } 
+    .header a{
+        text-decoration: none;
+        color: black;
+    }
+    .header a:hover{
+        color: blue;
+    }
+    .searchField{
+        margin-left: 18%;
+        position: relative;
+        height: 20px;
+    }
+    .searchIconContainer{
+        position: absolute;
+        background-color: rgb(202, 202, 202);
+        top: 3%;
+        left: 85%;
+        width: 15%;
+        height: 95%;
+    }
+    .header .prodNum{
+        position: absolute;
+        top: 9%;
+        right: 14%;
+        color: black;
+        font-size: 14px;
+    }
+    hr{
+        width: 80%;
+    }
+    .orangeColor{
+        color: rgb(247, 172, 34);
+
+    }    
+    .largeCenteredHead{
+        display: inline-block;
+        text-align: center;
+        background-color: rgb(247, 245, 245);
+        width: 65%;
+    }    
+    #shoppingCart {
+        position: fixed;
+        left: 65%;
+        top: 25.7%;
+        height: 140px;
+        width: 350px;
+        background-color: rgb(247, 245, 245);
+        text-align: center;
+    }  
+    i {
+        font-size: 30px;
+        vertical-align: middle;
+    }
+    .sameProductDesign {
+    margin: 1%;
+    }
+    #all_products_container {
+        display: inline-block;
+        width: 58%
+    }
+    .addToCartButton{
+        height: 30px;
+        color: rgb(243, 242, 242);
+        background-color: rgb(100, 155, 63);
+        border: 1px solid rgb(100, 155, 63);
+        border-radius: 1px;   
+        margin-left: 80%;
+    }
+    .clickedButton{
+        height: 30px;
+        color: rgb(243, 242, 242);
+        background-color: rgb(179, 8, 8);
+        border: 1px solid rgb(179, 8, 8);
+        border-radius: 1px;   
+        margin-left: 75%;
+    }
+    .addToCartButton:hover, i:hover{
+        cursor: pointer;
+    }
+    .prodInfo_container {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        margin-left: 5%;
+        color: rgb(102, 101, 101);
+    }
+    .productDetails{
+        margin: 2%;
+        color: black;
+    }
+    .prodInfo_title{
+        display: inline-block;
+        margin: 2%;
+        font-weight: bold;
+        color: black;
+    }
+    .product_image{
+        width: 60%;
+    }
+    #all_products_container hr {
+        display: block;
+        width: 94%;
+    } 
+    </style>
+
+</head>
+<body>
+    <marquee class="summerSaleContainer" behavior="alternate">
+        Summer sale is here.........Sale upto 25% on selected items.........for more details please check <span class="orangeColor">Sale</span> tab
+    </marquee>
+    <header>
+        <img src="https://picsum.photos/id/1015/200/200" class="logo" alt="website logo">
+        <ul class="header">
+            <li><a href="">Home </a> </li>
+            <li><a href=""> About Us</a></li>
+            <li> <a href="">Partners</a></li>
+            <li><a href="">Best Seller</a></li>
+            <li><a href="">Sale</a></li>
+            <li><a href="">Contact us</a></li>
+            <li class="searchField"><input name="search" placeholder="search product....." onfocus="this.placeholder=''" onblur="this.placeholder='search product.....'">
+                <div class="searchIconContainer"><i class="fas fa-search fa-sm"></i></div>
+            </li>
+            <li><i class="fas fa-shopping-cart orangeColor fa-lg" onclick=""><span class="prodNum">0</span></i></li>
+        </ul>
+        <div class="clear"></div>
+    </header>
+    <hr>
+    <h1 class="largeCenteredHead">We bring the best stores to your <i class="fas fa-home" style="color:blue"></i></h1
+    ><section id="shoppingCart">
+        <h4>YOUR SHOPPING CART</h4>
+        <p id="countNotSupport"><span class="prodNum">0</span> Item(s) Added to cart</p>
+    </section>
+    <section id="all_products_container"></section>    
+    <script src="main.js"></script> 
+
+</body>
+</html>
